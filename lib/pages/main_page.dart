@@ -16,6 +16,36 @@ class MainPage extends StatelessWidget {
           statusBarColor: Color.fromARGB(255, 58, 58, 71),
         )
       ),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 100),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Hey Friends", style: TextStyle(color: Colors.white),)],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: (){}, 
+                  child: Text("Let's Talk", style: TextStyle(color: Colors.white),),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    padding: EdgeInsets.all(24),
+                    backgroundColor: Color.fromARGB(255, 250, 154, 104),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Color.fromARGB(255, 58, 58, 71),
         buttonBackgroundColor: Color.fromARGB(255, 250, 154, 104),
