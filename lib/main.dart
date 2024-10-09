@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hey_friends/pages/main_page.dart';
+import 'package:hey_friends/pages/quiz_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MainPage(),
+        '/quiz': (context) => QuizPage()
+      },
     );
   }
 }
