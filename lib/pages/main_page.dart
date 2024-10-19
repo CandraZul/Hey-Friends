@@ -15,10 +15,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 58, 58, 71),
+      backgroundColor: const Color.fromARGB(255, 58, 58, 71),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 58, 58, 71),
-        systemOverlayStyle: SystemUiOverlayStyle(
+        backgroundColor: const Color.fromARGB(255, 58, 58, 71),
+        systemOverlayStyle: const SystemUiOverlayStyle(
           systemNavigationBarColor: Color.fromARGB(255, 250, 154, 104), // Navigation bar
           statusBarColor: Color.fromARGB(255, 58, 58, 71),
         )
@@ -27,8 +27,8 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 100),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 100),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [Text("Hey Friends", style: TextStyle(color: Colors.white),)],
@@ -41,15 +41,15 @@ class _MainPageState extends State<MainPage> {
                   height: 104,
                   width: 268,
                   child: ElevatedButton(
-                    onPressed: (){}, 
-                    child: Text("Let's Talk", style: TextStyle(color: Colors.white),),
+                    onPressed: (){},
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)
                       ),
-                      padding: EdgeInsets.all(24),
-                      backgroundColor: Color.fromARGB(255, 250, 154, 104),
-                    ),
+                      padding: const EdgeInsets.all(24),
+                      backgroundColor: const Color.fromARGB(255, 250, 154, 104),
+                    ), 
+                    child: Text("Let's Talk", style: TextStyle(color: Colors.white),),
                   )
                 )
               ],
@@ -74,9 +74,9 @@ class _MainPageState extends State<MainPage> {
       ),
       
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromARGB(255, 58, 58, 71),
-        buttonBackgroundColor: Color.fromARGB(255, 250, 154, 104),
-        color: Color.fromARGB(255, 250, 154, 104),
+        backgroundColor: const Color.fromARGB(255, 58, 58, 71),
+        buttonBackgroundColor: const Color.fromARGB(255, 250, 154, 104),
+        color: const Color.fromARGB(255, 250, 154, 104),
         height: 55.0,
         items: const<Widget>[
           Icon(Icons.home, size: 30,),
@@ -102,15 +102,15 @@ class _MainPageState extends State<MainPage> {
                   child: ElevatedButton(
                     onPressed: (){
                       Navigator.pushNamed(context, '/quiz', arguments: topic);
-                    }, 
-                    child: Text(topic, style: TextStyle(color: Colors.white),),
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)
                       ),
-                      padding: EdgeInsets.all(24),
-                      backgroundColor: Color.fromARGB(255, 82, 83, 94),
-                    ),
+                      padding: const EdgeInsets.all(24),
+                      backgroundColor: const Color.fromARGB(255, 82, 83, 94),
+                    ), 
+                    child: Text(topic, style: TextStyle(color: Colors.white),),
                   )
                 ),
               );
