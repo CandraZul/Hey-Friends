@@ -10,7 +10,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _page = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +24,16 @@ class _MainPageState extends State<MainPage> {
       ),
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(bottom: 100),
+            SizedBox(
+              height: 250,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Hey Friends", style: TextStyle(color: Colors.white),)],
+                children: [
+                  Image.asset(
+                    'assets/bird.png',
+                    ),
+                ],
               ),
             ),
             Row(
@@ -85,7 +87,6 @@ class _MainPageState extends State<MainPage> {
         ],
         onTap: (index){
           setState(() {
-              _page = index;
             });
         },
 
